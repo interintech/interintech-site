@@ -754,15 +754,23 @@ section {
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 0;
         left: -100%;
         flex-direction: column;
         background: var(--dark-surface);
         width: 100%;
-        padding: 1.5rem;
-        transition: left 0.3s;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 64px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin: 0;
+        transition: left 0.3s ease;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 999;
+        display: flex;
+        gap: 0;
     }
 
     .nav-menu.active {
@@ -771,6 +779,14 @@ section {
     
     .nav-menu li {
         width: 100%;
+    }
+    
+    .nav-menu li:first-of-type {
+        margin-top: 0;
+    }
+    
+    .nav-menu li:last-of-type {
+        margin-bottom: 0;
     }
     
     .nav-menu a {
@@ -909,6 +925,10 @@ section {
     /* ========== ИСПРАВЛЕНИЕ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ ========== */
     .navbar {
         padding: 0.75rem 0;
+    }
+    
+    .nav-menu {
+        padding-top: 52px;
     }
     
     .logo-text {
