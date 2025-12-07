@@ -531,6 +531,13 @@ section {
     opacity: 1;
 }
 
+/* ========== УБИРАЕМ OVERLAY НА МОБИЛЬНЫХ ========== */
+@media (max-width: 768px) {
+    .project-overlay {
+        display: none !important;
+    }
+}
+
 .project-link {
     color: white;
     text-decoration: none;
